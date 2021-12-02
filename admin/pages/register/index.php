@@ -111,9 +111,7 @@
                             <br><br>
                             <div><a href="../../index.php">Sudah punya akun?</a></div>
                         </div>
-                    </form>
-                    <br><center><p>Repost by <a href='https://stokcoding.com/' title='StokCoding.com' target='_blank'>StokCoding.com</a></p></center>
-                    
+                    </form>                    
                 </div>
             </div>
         </div>

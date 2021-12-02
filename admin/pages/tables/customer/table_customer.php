@@ -159,7 +159,6 @@ else
                         <div class="card">
                             <h5 class="card-header">Data Customer</h5>
                             <div class="card-body">
-                                <a href="form_customer.php" class="btn btn-primary">Tambah Data</a>
                                 <?php
                                 $message = '';
                                 if(isset($_GET["error"]))

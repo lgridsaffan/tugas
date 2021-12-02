@@ -12,6 +12,9 @@
 			margin-left: 10px;
 			color: black;
 		}
+		.search {
+			margin-left: 20px;
+		}
 	</style>
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -72,20 +75,35 @@ $nama = $row['nama_customer'];
 				</div>
 
 			</div>
+			
 		</div>
-
+		
 		<!-- Products -->
 		<section id="produk">
+			<div class="search">
+				<form action="index.php" method="GET">
+					<input type="text" class="form-control mt-2" name="s" placeholder="Cari ...">
+				</form>
+			</div>
 			<div class="products">
+				
 				<div class="container">
+					
 					<div class="row">
 						<div class="col">
 
 							<div class="product_grid">
 								<?php
+								$s = isset($_GET['s']) ? $_GET['s'] : '';
 								$query = 
-								"select * from buku b,pengarang p
-								where b.id_pengarang = p.id_pengarang";
+								"SELECT buku.*, pengarang.nama_pengarang, penerbit.nama_penerbit FROM buku
+								INNER JOIN pengarang
+								ON buku.id_pengarang = pengarang.id_pengarang
+								INNER JOIN penerbit
+								ON buku.id_penerbit = penerbit.id_penerbit
+								WHERE buku.judul_buku LIKE '%{$s}%' OR
+								pengarang.nama_pengarang LIKE '%{$s}%' OR
+								penerbit.nama_penerbit LIKE '%{$s}%'";
 								
 								$result = mysqli_query($con, $query);
 

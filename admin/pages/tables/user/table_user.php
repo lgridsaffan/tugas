@@ -160,7 +160,6 @@ else
                         <div class="card">
                             <h5 class="card-header">Data User</h5>
                             <div class="card-body">
-                                <a href="form_user.php" class="btn btn-primary">Tambah Data</a><br><br>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>

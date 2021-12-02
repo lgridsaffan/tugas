@@ -51,7 +51,7 @@ $id_buku = $_GET['id_buku'];
 
 					<?php
 					$query = 
-					"SELECT * from buku where id_buku='$id_buku'";
+					"SELECT buku.*, penerbit.nama_penerbit AS penerbit, pengarang.nama_pengarang AS pengarang from buku, pengarang, penerbit where buku.id_pengarang = pengarang.id_pengarang AND buku.id_penerbit = penerbit.id_penerbit AND buku.id_buku='$id_buku' ";
 					
 					$result = mysqli_query($con, $query);
 					$row = mysqli_fetch_assoc($result);
@@ -80,7 +80,7 @@ $id_buku = $_GET['id_buku'];
 							<div class="in_stock_container">
 								<div class="availability">Availability:</div>
 								<?php if($row['stok'] > 0){ ?>
-								<span>In Stock</span>
+								<span>In Stock (<?= $row['stok'] ?>)</span>
 								<?php } else { ?>
 								<span>
 									<font color="red">Sold Out</font>
@@ -88,7 +88,13 @@ $id_buku = $_GET['id_buku'];
 								<?php } ?>
 							</div>
 
-							<div class="details_text">
+							<div class="details_text" style="margin-top: 15px;">
+								<p>
+									Penerbit : <?php echo $row['penerbit'] ?>
+								</p>
+								<p>
+									Pengarang : <?php echo $row['pengarang'] ?>
+								</p>
 								<p>
 									<?php echo $row['deskripsi'] ?>
 								</p>
