@@ -66,6 +66,7 @@ $nama = $row['nama_customer'];
 
 		<div class="cart_info">
 			<div class="container">
+				<p> Silahkan hubungi nomer <a href="https://wa.me/082229019220">admin</a> untuk menanyakan seputar orderan anda.</p>
 				<div class="row">
 					<div class="col">
 						<table id="tabell" class="table table-striped">
