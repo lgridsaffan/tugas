@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 02 Des 2021 pada 11.24
+-- Waktu pembuatan: 02 Des 2021 pada 11.46
 -- Versi server: 10.6.5-MariaDB
 -- Versi PHP: 8.0.13
 
@@ -51,9 +51,10 @@ INSERT INTO `buku` (`id_buku`, `judul_buku`, `id_pengarang`, `id_penerbit`, `id_
 ('BU-3', 'Dunia Lebih Jelek Daripada Bangkai Kambing', 'PG-3', 'PN-3', 'K-3', 48, 1, 50000, 'Kehidupan dunia adalah kehidupan sementara, fana, dan akan hancur. Kehidupan dunia ini hanyalah permainan, senda gurau, kesenangan yang memukau, mempesona dan menipu manusia.\r\n\r\nRasulullah shalallahuâ€™alaihi wa sallam membuat perumpamaan bahwa dunia ini lebih jelek dan lebih hina daripada bangkai kambing. Dunia tidak ada harganya meskipun hanya seberat sayap nyamuk. Kesenangan dunia itu hanya sedikit dan sebentar, sedangkan akhirat itulah yang kekal Abadi.', '1853344483576784537.jpg', 0),
 ('BU-4', 'Sebaik Baik Amal Adalah Shalat', 'PG-3', 'PN-3', 'K-3', 47, 1, 32000, 'Shalat adalah tiang agama, tidak akan tegak agama ini kecuali dengannya. Shalat adalah ibadah yang pertama kali diwajibkan dan termasuk amal perbuatan yang pertama kali akan dihisab pada hari Kiamat.', '1849824660192323617.jpg', 0),
 ('BU-5', 'Dzikir Pagi Petang dan Sesudah Shalat Fardhu', 'PG-3', 'PN-1', 'K-4', 48, 1, 16000, 'Dzikir pagi berikut patut diamalkan karena akan membuat kita lebih semangat di pagi hari dan dimudahkan Allah dalam segala urusan. Untuk waktunya, yang utama dibaca saat masuk waktu Shubuh hingga matahari terbit. Namun boleh juga dibaca sampai matahari akan bergeser ke barat (mendekati waktu Zhuhur). Dzikir kali ini pun kami bantu dengan transliterasi untuk setiap bacaan selain bacaan Al Qurâ€™an, moga bermanfaat bagi yang sulit membaca dzikir yang ada huruf demi huruf. ( rumaysho )', '1862889007323857908.jpg', 0),
-('BU-6', 'Amalan Sunnah Setahun', 'PG-3', 'PN-4', 'K-3', 48, 1, 175000, 'Buku ini terdiri dari 27 bab dan terbit dengan tampilan desain yang elegan dan layout yang menarik, serta penyajian isi buku yang sistematis, ringkas dan lengkap. In syaa Allah buku ini dapat menjadi buku panduan amalan bagi setiap Muslim dan Muslimah, dalam menetapkan keutamaan (Fadhail) atau pun melaksanakan amalan-amalan tertentu dalam beribadah kepada Allah Taâ€™ala, maka ini adalah mutlak hak Allah â€˜Azza Wa Jalla. Dan hendaknya setiap Muslim dan Muslimah berkeyakinan dengan ketetapan Allah Taâ€™ala saja yang bersumber dari Al-Quran dan Sunnah Nabi-Nya.', '1860567646077193234.jpg', 0),
+('BU-6', 'Amalan Sunnah Setahun', 'PG-3', 'PN-4', 'K-3', 47, 1, 175000, 'Buku ini terdiri dari 27 bab dan terbit dengan tampilan desain yang elegan dan layout yang menarik, serta penyajian isi buku yang sistematis, ringkas dan lengkap. In syaa Allah buku ini dapat menjadi buku panduan amalan bagi setiap Muslim dan Muslimah, dalam menetapkan keutamaan (Fadhail) atau pun melaksanakan amalan-amalan tertentu dalam beribadah kepada Allah Taâ€™ala, maka ini adalah mutlak hak Allah â€˜Azza Wa Jalla. Dan hendaknya setiap Muslim dan Muslimah berkeyakinan dengan ketetapan Allah Taâ€™ala saja yang bersumber dari Al-Quran dan Sunnah Nabi-Nya.', '1860567646077193234.jpg', 0),
 ('BU-7', 'Tuntunan Doa Harian', 'PG-4', 'PN-5', 'K-1', 49, 1, 15000, 'Tuntunan Doa Sesuai Sunnah', '1915959747641505596.jpg', 0),
-('BU-8', 'Tuntunan Hafalan Juz Amma jilid 1', 'PG-4', 'PN-5', 'K-1', 48, 1, 15000, 'Supaya Anak-Anak Cepat Hafal Juz Amma', '1915963394773346939.jpg', 0);
+('BU-8', 'Tuntunan Hafalan Juz Amma jilid 1', 'PG-4', 'PN-5', 'K-1', 48, 1, 15000, 'Supaya Anak-Anak Cepat Hafal Juz Amma', '1915963394773346939.jpg', 0),
+('BU-9', 'Solo Leveling', 'PG-3', 'PN-2', 'K-5', 5, 1, 28000, 'novel web Korea Selatan yang ditulis oleh Chugong. Novel ini diserialkan di platform komik dan fiksi digital Kakao, KakaoPage pada 25 Juli 2016 dan kemudian diterbitkan oleh D&C Media di bawah label Papirus mereka pada 4 November 2016.', 'gambar3.jpeg', 0);
 
 -- --------------------------------------------------------
 
@@ -104,7 +105,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `deleted`) VALUES
 ('K-2', 'Komik', 0),
 ('K-3', 'Aqidah', 0),
 ('K-4', 'Shalat', 0),
-('K-5', 'Doujin', 1);
+('K-5', 'Novel', 0);
 
 -- --------------------------------------------------------
 
@@ -193,6 +194,7 @@ INSERT INTO `transaksi` (`id_transaksi`, `id_customer`, `id_buku`, `tgl_transaks
 ('TR-21', 'CUS-6', 'BU-2', '2021-12-02 10:37:58', 1, 150000),
 ('TR-22', 'CUS-6', 'BU-3', '2021-12-02 10:37:58', 1, 50000),
 ('TR-23', 'CUS-6', 'BU-2', '2021-12-02 10:43:17', 1, 150000),
+('TR-24', 'CUS-6', 'BU-6', '2021-12-02 11:36:20', 1, 175000),
 ('TR-3', 'CUS-4', 'BU-8', '2018-12-20 23:41:17', 1, 15000),
 ('TR-4', 'CUS-4', 'BU-5', '2018-12-20 23:41:17', 1, 16000),
 ('TR-5', 'CUS-4', 'BU-7', '2018-12-20 23:44:36', 1, 15000),
