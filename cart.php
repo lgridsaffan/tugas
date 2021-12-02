@@ -158,7 +158,34 @@ $nama = $row['nama_customer'];
 					</ul>
 				</div>
 				<br>
-				<div class="button checkout_button"><a href="process/input-cart.php">Proceed to checkout</a></div>
+				<div class="button checkout_button"><a href="#" data-toggle="modal" data-target="#exampleModal">Proceed to checkout</a></div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Bukti Pembayaran</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<form action="process/input-cart.php" method="POST" enctype="multipart/form-data">
+						<div class="modal-body">
+							<p>
+								Silakan transfer ke no. rek berikut : 198273824827397 
+								<br>
+								Atas nama Bambank Supratman
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+							<button type="submit" class="btn btn-primary">Proses</button>
+						</div>
+					</form>
+					</div>
+				</div>
+				</div>
 			</div>
 		</div>
 		<?php } ?>

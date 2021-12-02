@@ -23,7 +23,6 @@ else
         $id_buku = $pecah["id_buku"];
         $subharga =$pecah["harga"]*$jumlah;
         $id_customer = $_SESSION['id_customer'];
-
         $query = $con->query("INSERT INTO transaksi (id_transaksi, id_customer, id_buku, tgl_transaksi, jumlah, total) VALUES ('TR-$no', '$id_customer','$id_buku',now(), $jumlah, $subharga)");
         
         if($query)
